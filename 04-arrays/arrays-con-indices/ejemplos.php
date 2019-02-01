@@ -51,5 +51,24 @@ for ($i = 0; $i < $numero_de_elementos; $i++ ) {
     echo $productos[$i];
     echo "</br>";
 }
+// arrays con foreach
+
+$alumnos = array("Valor"=>"Clave", "Antonio"=>"31", "Maria"=>"28", "Juan"=>"29", "Pepe"=>"27");
+
+//Orden ascencente por valor
+asort($alumnos);
+    foreach($alumnos as $clave => $valor){
+        echo "Clave: ".$clave." - Valor: ". $valor;
+        echo "</br>";
+    }
+
+echo "<pre>";
+print_r($alumnos);
+echo "</pre>";
+
+//En este caso permanece el valor "20" en Antonio, al tener 1 clave varias veces con diferentes valores prevalece el ultimo valor asignado
+$alumnos = array("Antonio"=>"31", "Antonio"=>"20", "Juan"=>"29", "Pepe"=>"27");
+
+
 
 ?>
